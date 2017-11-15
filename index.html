@@ -39,7 +39,7 @@
 <div class="reveal">
 	<!-- Any section element inside of this container is displayed as a slide -->
 	<div class="slides">
-		<section class="full" data-background-image="./resources/derpymon.png">
+		<section class="full" data-background-image="./images/derpymon.png">
 			<h2>Derpymon</h2>
 			<p>Building reactive VR experiences with Dojo 2 and A-Frame</p>
 		</section>
@@ -66,6 +66,207 @@
 			<aside class="notes">
 				TODO add images to intern, podcast, phxts, github, twitter
 			</aside>
+		</section>
+
+		<section data-background-image="./images/aframe-rendered-full.png">
+			<h1>A-Frame</h1>
+		</section>
+
+		<section>
+			<p>A-Frame is a declarative framework for building VR on the web.</p>
+
+			<pre class="fragment" style='color:#d1d1d1;background:#000000;width:1280px; max-width: 95%;overflow-x:hidden'><span
+					style='color:#ff8906;'>&lt;</span><span
+					style='color:#e66170; font-weight:bold; '>a</span><span style='color:#f6c1d0; '>-scene</span><span
+					style='color:#ff8906; '>></span>
+    <span style='color:#ff8906; '>&lt;</span><span style='color:#e66170; font-weight:bold; '>a</span><span
+						style='color:#f6c1d0; '>-box</span> color<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"#4CC3D9"</span> position<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"-1 0.5 -3"</span> rotation<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"0 45 0"</span><span style='color:#ff8906; '>></span><span
+						style='color:#ff8906; '>&lt;/</span><span style='color:#f6c1d0; '>a-box</span><span
+						style='color:#ff8906; '>></span>
+    <span style='color:#ff8906; '>&lt;</span><span style='color:#e66170; font-weight:bold; '>a</span><span
+						style='color:#f6c1d0; '>-cylinder</span> color<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"#FFC65D"</span> position<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"1 0.75 -3"</span> radius<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"0.5"</span> height<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"1.5"</span><span style='color:#ff8906; '>></span><span
+						style='color:#ff8906; '>&lt;/</span><span style='color:#f6c1d0; '>a-cylinder</span><span
+						style='color:#ff8906; '>></span>
+    <span style='color:#ff8906; '>&lt;</span><span style='color:#e66170; font-weight:bold; '>a</span><span
+						style='color:#f6c1d0; '>-sphere</span> color<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"#EF2D5E"</span> position<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"0 1.25 -5"</span> radius<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"1.25"</span><span style='color:#ff8906; '>></span><span
+						style='color:#ff8906; '>&lt;/</span><span style='color:#f6c1d0; '>a-sphere</span><span
+						style='color:#ff8906; '>></span>
+    <span style='color:#ff8906; '>&lt;</span><span style='color:#e66170; font-weight:bold; '>a</span><span
+						style='color:#f6c1d0; '>-plane</span> color<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"#7BC8A4"</span> position<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"0 0 -4"</span> rotation<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"-90 0 0"</span> width<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"4"</span> height<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"4"</span><span style='color:#ff8906; '>></span><span
+						style='color:#ff8906; '>&lt;/</span><span style='color:#f6c1d0; '>a-plane</span><span
+						style='color:#ff8906; '>></span>
+    <span style='color:#ff8906; '>&lt;</span><span style='color:#e66170; font-weight:bold; '>a</span><span
+						style='color:#f6c1d0; '>-sky</span> color<span style='color:#d2cd86; '>=</span><span
+						style='color:#00c4c4; '>"#ECECEC"</span><span style='color:#ff8906; '>></span><span
+						style='color:#ff8906; '>&lt;/</span><span style='color:#f6c1d0; '>a-sky</span><span
+						style='color:#ff8906; '>></span>
+<span style='color:#ff8906; '>&lt;/</span><span style='color:#f6c1d0; '>a-scene</span><span
+						style='color:#ff8906; '>></span>
+</pre>
+		</section>
+
+		<section>
+			<p>A-Frame is an <b>Entity - Component - System</b> framework for THREE.js with WebVR support</p>
+		</section>
+
+		<section>
+			<h2>Entity</h2>
+
+			<p>An entity is a basic object represented by an &lt;a-entity&gt; tag</p>
+		</section>
+
+		<section>
+			<h2>Component</h2>
+
+			<p>A component is a reusable chunk of code added to an entity that represents behavior or appearance</p>
+		</section>
+
+		<section>
+			<h2>System</h2>
+
+			<p>A global scope for services and data shared with a component of the same name</p>
+		</section>
+
+		<section>
+			<h2>How does A-Frame work?</h2>
+		</section>
+
+		<section>
+			<p>A-Frame uses custom elements that allow it to create VR scenes</p>
+
+			<ol>
+				<li class="fragment">All VR objects are contained in an &lt;a-scene&gt; element</li>
+				<li class="fragment">A-Frame creates a &lt;canvas&gt; for rendering</li>
+				<li class="fragment">Entities are read as HTML and rendered to the canvas</li>
+				<li class="fragment">Entities are watched for changes</li>
+			</ol>
+		</section>
+
+		<section data-background-image="./images/dojo2-bg.jpg">
+			<div class="tall center-column-flex">
+				<img src="./images/dragon2.svg" class="removeFormatting">
+				<h2>Dojo 2</h2>
+			</div>
+		</section>
+
+		<section>
+			<p>Dojo 2 is a reactive framework that reacts to changes in state to propagate and render change to the view</p>
+		</section>
+
+		<section>
+			<h3>Reactive Architecture</h3>
+			<img src="./images/reactive.svg" class="removeFormatting">
+		</section>
+
+		<section>
+			<h3>Dojo Stores</h3>
+
+			<p>Dojo doesn't lock us into a particular pattern as long as property changes can be detected</p>
+		</section>
+
+		<section>
+			<h1>Building Derpymon</h1>
+		</section>
+
+		<section>
+			<h3>Architectural Roles</h3>
+
+			<p>A-Frame and Dojo 2 both rely on the DOM and maintain state.</p>
+
+			<p class="fragment">How do we make them work together?</p>
+		</section>
+
+		<section>
+			<p>Dojo's role is to render and modify <u>application</u> state</p>
+
+			<ul>
+				<li class="fragment"><b>Stores</b> define the state of the application</li>
+				<li class="fragment"><b>Widgets</b> render DOM elements to the page</li>
+			</ul>
+		</section>
+
+		<section>
+			<p>A-Frame's role is to transform and render 3D state</p>
+			<ul>
+				<li class="fragment"><b>Custom Elements</b> to declare the structure of an environment.</li>
+				<li class="fragment"><b>Components</b> are used to modify the underlying THREE.js model</li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>DEMO TIME!</h1>
+		</section>
+
+		<section>
+			<h3>Take-Aways</h3>
+
+			<ul>
+				<li class="fragment">A-Frame <b>Components</b> are properties on <b>Custom Elements</b></li>
+				<li class="fragment"><b>Custom Elements</b> should maintain their own internal state</li>
+				<li class="fragment"><b>Rendering</b> can reset this internal state</li>
+			</ul>
+		</section>
+
+		<section>
+			<p>Always identify when state should be persisted in the <i>Application</i> layer vs <i>Render</i> layer</li></p>
+
+			<ul>
+				<li class="fragment">Can my widgets reproduce state?</li>
+				<li class="fragment">Should I monitor state of this element and share it with Dojo?</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Getting Started w/ A-Frame</h2>
+		</section>
+
+		<section>
+			<h3>Models</h3>
+
+			<ul>
+				<li><a href="https://sketchfab.com/">Sketchfab</a></li>
+				<li><a href="https://ephtracy.github.io/">Magicavoxel</a></li>
+				<li><a href="https://poly.google.com/">Google Blocks (Vive)</a></li>
+				<li><a href="https://mikelovesrobots.github.io/mmmm/">Metro Minis</a></li>
+				<li><a href="https://www.blender.org/">Blender</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>A-Frame tools</h3>
+
+			<ul>
+				<li><a href="https://www.npmjs.com/search?q=aframe-component&page=1&ranking=optimal">A-Frame Components</a></li>
+				<li><a href="https://www.youtube.com/watch?v=LtFujAtKM5I&list=PLMinhigDWz6emRKVkVIEAaePW7vtIkaIF">Fun with WebGL 2.0</a></li>
+				<li><a href="https://github.com/donmccurdy/aframe-extras">A-Frame extras</a></li>
+				<li><a href="https://github.com/donmccurdy/aframe-physics-system">A-Frame physics system</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Getting Help</h3>
+
+			<ul>
+				<li><a href="https://aframe.io/docs/">A-Frame Docs</a></li>
+				<li><a href="https://glitch.com/~aframe">A-Frame on Glitch</a></li>
+				<li><a href="https://aframevr-slack.herokuapp.com/">A-Frame Slack</a></li>
+				<li><a href="https://stackoverflow.com/questions/ask/?tags=aframe">Stack Overflow</a></li>
+			</ul>
 		</section>
 	</div>
 </div>
